@@ -23,4 +23,5 @@ GameLift Exposed is an Plugin for Unreal Engine 4, that is developed by myself t
 * Basic knowledge of Unreal Engine to compile/package Unreal Project's and Dedicated Server
 
 ## How to use
+##### I assume that you already have a compiled version of the Unreal Engine
 coming soon...

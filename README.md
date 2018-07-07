@@ -5,7 +5,7 @@ Unreal Engine 4 Multiplayer example for [Amazon's GameLift service](https://aws.
 GameLift Exposed is an Plugin for Unreal Engine 4, that is developed by myself and to expose Amazon's [AWS C++ SDK](https://github.com/aws/aws-sdk-cpp) (only GameLift functions) to Blueprints.
 
 ## Dependencies
-* Unreal Engine 4 4.19.2 builded from source [[Link](https://github.com/EpicGames/UnrealEngine/tree/4.19)]
+* Unreal Engine 4.19.2 builded from source [[Link](https://github.com/EpicGames/UnrealEngine/tree/4.19)]
 * Amazon's AWS Server Plugin for Unreal (already implemented in the example)
 * Amazon's AWS GameLift Local Client [[Link](https://s3-us-west-2.amazonaws.com/gamelift-release/GameLift_02_15_2018.zip)]
 * Amazon AWS Account, only for production environment needed [[Link (1-Year Free Contingent)](https://aws.amazon.com/gamelift/getting-started/)]

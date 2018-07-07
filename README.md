@@ -10,4 +10,4 @@ GameLift Exposed is an Plugin for Unreal Engine 4, that is developed by myself a
 * Amazon's AWS GameLift Local Client [[Link](https://s3-us-west-2.amazonaws.com/gamelift-release/GameLift_02_15_2018.zip)]
 * Amazon AWS Account, only for production environment needed [[Link (1-Year Free Contingent)](https://aws.amazon.com/gamelift/getting-started/)]
 * GameLift Exposed Plugin
-* Basic knowledge of compiling unreal projects and dedicated servers
+* Basic knowledge of Unreal Engine to compile/package Unreal Project's and Dedicated Server

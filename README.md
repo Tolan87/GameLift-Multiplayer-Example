@@ -9,6 +9,8 @@ storage, and performance tracking. The Amazon GameLift auto-scaling capabilities
 protection from having to pay for more resources than you need, while helping to ensure that your
 players can find and join games with minimal waiting.
 
+[Official AWS GameLift Documentation](https://aws.amazon.com/documentation/sdk-for-cpp/)
+
 ## What is GameLift Exposed?
 GameLift Exposed is an Plugin for Unreal Engine 4, that is developed by myself to expose Amazon's [AWS C++ SDK](https://github.com/aws/aws-sdk-cpp) (only GameLift functions) to Blueprints.
 

@@ -1,0 +1,16 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{76585909-46A2-C3E0-BBC9-DDA7A987B15F}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "GameLiftExample",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	]
+}

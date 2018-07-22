@@ -7,10 +7,18 @@ public class GameLiftExample : ModuleRules
 	public GameLiftExample(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+
+        if (Target.Type == TargetRules.TargetType.Server)
+        {
+            PublicDependencyModuleNames.Add("GameLiftServerSDK");
+        }
+        else
+        {
+            // Suppress warning C4668
+            PublicDefinitions.Add("WITH_GAMELIFT=0");
+        }
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

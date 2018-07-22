@@ -3,11 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class GameLiftExampleEditorTarget : TargetRules
+public class GameLiftExampleServerTarget : TargetRules
 {
-	public GameLiftExampleEditorTarget(TargetInfo Target) : base(Target)
+	public GameLiftExampleServerTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Editor;
+		Type = TargetType.Server;
+
+        bForceEnableExceptions = true;
 
         ExtraModuleNames.AddRange( new string[] { "GameLiftExample" } );
 	}

@@ -9,6 +9,8 @@ public class GameLiftExampleTarget : TargetRules
 	{
 		Type = TargetType.Game;
 
-		ExtraModuleNames.AddRange( new string[] { "GameLiftExample" } );
+        bForceEnableExceptions = true;
+
+        ExtraModuleNames.AddRange( new string[] { "GameLiftExample" } );
 	}
 }

@@ -57,7 +57,11 @@ public class GameLiftServerSDK : ModuleRules
         {
             if (Target.Type == TargetRules.TargetType.Server)
             {
-                Definitions.Add("WITH_GAMELIFT=1");    
+                // Suppress build error 4577
+                bEnableExceptions = true;
+
+                PublicDefinitions.Add("WITH_GAMELIFT=1");
+                
                 if (Target.Platform == UnrealTargetPlatform.Linux)
                 {
                     SDKDirectory = System.IO.Path.Combine(SDKDirectory, "x86_64-unknown-linux-gnu");
@@ -65,7 +69,7 @@ public class GameLiftServerSDK : ModuleRules
                 
                     PublicLibraryPaths.Add(SDKDirectory);
                     PublicAdditionalLibraries.Add(SDKLib);    
-                    RuntimeDependencies.Add(new RuntimeDependency(SDKLib));
+                    RuntimeDependencies.Add(SDKLib);
                 }
                 else if (Target.Platform == UnrealTargetPlatform.Win64)
                 {
@@ -73,17 +77,17 @@ public class GameLiftServerSDK : ModuleRules
                     PublicAdditionalLibraries.Add(System.IO.Path.Combine(SDKDirectory, "aws-cpp-sdk-gamelift-server.lib"));
                     PublicDelayLoadDLLs.Add("aws-cpp-sdk-gamelift-server.dll");
                     string SDKLibWindows = System.IO.Path.Combine(SDKDirectory, "aws-cpp-sdk-gamelift-server.dll");
-                    RuntimeDependencies.Add(new RuntimeDependency(SDKLibWindows));
+                    RuntimeDependencies.Add(SDKLibWindows);
                 }
             }
             else
             {
-                Definitions.Add("WITH_GAMELIFT=0");
+                PublicDefinitions.Add("WITH_GAMELIFT=0");
             }
         }
         else
         {
-            Definitions.Add("WITH_GAMELIFT=0");
+            PublicDefinitions.Add("WITH_GAMELIFT=0");
         }
     }
 }

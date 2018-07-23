@@ -14,7 +14,10 @@ class GAMELIFTEXAMPLE_API AGameModeServerBase : public AGameMode
 {
 	GENERATED_BODY()
 	
+public:
 	
-	
-	
+	/**
+	 * Default Constructor
+	 */
+	AGameModeServerBase();
 };

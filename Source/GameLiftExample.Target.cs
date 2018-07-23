@@ -9,6 +9,9 @@ public class GameLiftExampleTarget : TargetRules
 	{
 		Type = TargetType.Game;
 
-		ExtraModuleNames.AddRange( new string[] { "GameLiftExample" } );
+        // Suppress build error 4577
+        bForceEnableExceptions = true;
+
+        ExtraModuleNames.AddRange( new string[] { "GameLiftExample" } );
 	}
 }
